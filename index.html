@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator for Children</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-card">
+            <h1>BMI Calculator for Children</h1>
+            <p class="subtitle">Calculate Body Mass Index with age-appropriate measurements</p>
+            
+            <form id="bmi-form">
+                <div class="input-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" id="weight" step="0.1" min="0" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="age">Age (months)</label>
+                    <input type="number" id="age" min="0" max="240" required>
+                    <small class="help-text">Enter age in months (0-240 months / 0-20 years)</small>
+                </div>
+                
+                <div class="input-group">
+                    <label for="measurement" id="measurement-label">Height/Length (cm)</label>
+                    <input type="number" id="measurement" step="0.1" min="0" required>
+                    <small class="help-text" id="measurement-help">
+                        For children under 24 months: Enter body length
+                    </small>
+                </div>
+                
+                <button type="submit" class="calculate-btn">Calculate BMI</button>
+            </form>
+            
+            <div id="result" class="result hidden">
+                <h2>BMI Result</h2>
+                <div class="bmi-value">
+                    <span id="bmi-number">0.0</span>
+                    <span class="unit">kg/m²</span>
+                </div>
+                <div class="measurement-info">
+                    <p id="measurement-used"></p>
+                    <p id="conversion-note"></p>
+                </div>
+                <div class="bmi-category">
+                    <span id="category-text">Normal weight</span>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3>How it works</h3>
+                <ul>
+                    <li><strong>Under 24 months:</strong> Use body length measurement</li>
+                    <li><strong>24 months and over:</strong> Use height measurement</li>
+                    <li><strong>Conversion:</strong> Length to height: +0.7cm | Height to length: -0.7cm</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
