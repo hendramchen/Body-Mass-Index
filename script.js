@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateMeasurementLabels(age) {
         if (age < 24) {
-            measurementLabel.textContent = 'Body Length (cm)';
-            measurementHelp.textContent = 'For children under 24 months: Enter body length';
+            measurementLabel.textContent = 'Panjang Badan (cm)';
+            measurementHelp.textContent = 'Untuk anak di bawah 24 bulan: Masukkan panjang badan';
         } else {
-            measurementLabel.textContent = 'Height (cm)';
-            measurementHelp.textContent = 'For children 24 months and over: Enter height';
+            measurementLabel.textContent = 'Tinggi Badan (cm)';
+            measurementHelp.textContent = 'Untuk anak 24 bulan dan lebih: Masukkan tinggi badan';
         }
     }
 
