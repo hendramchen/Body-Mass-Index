@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Calculator for Children</title>
+    <title>Kalkulator Indeks Massa Tubuh</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="calculator-card">
-            <h1>BMI Calculator for Children</h1>
-            <p class="subtitle">Calculate Body Mass Index with age-appropriate measurements</p>
+            <h1>Kalkulator Indeks Massa Tubuh</h1>
+            <p class="subtitle">Hitung Indeks Massa Tubuh dengan ukuran yang sesuai dengan usia</p>
             
             <form id="bmi-form">
                 <div class="input-group">
-                    <label for="weight">Weight (kg)</label>
+                    <label for="weight">Berat Badan (kg)</label>
                     <input type="number" id="weight" step="0.1" min="0" required>
                 </div>
                 
                 <div class="input-group">
-                    <label for="age">Age (months)</label>
+                    <label for="age">Usia (bulan)</label>
                     <input type="number" id="age" min="0" max="240" required>
-                    <small class="help-text">Enter age in months (0-240 months / 0-20 years)</small>
+                    <small class="help-text">Masukkan usia dalam bulan (0-240 bulan / 0-20 tahun)</small>
                 </div>
                 
                 <div class="input-group">
-                    <label for="measurement" id="measurement-label">Height/Length (cm)</label>
+                    <label for="measurement" id="measurement-label">Tinggi Badan (cm)</label>
                     <input type="number" id="measurement" step="0.1" min="0" required>
                     <small class="help-text" id="measurement-help">
-                        For children under 24 months: Enter body length
+                        Masukkan ukuran badan yang sesuai dengan usia
                     </small>
                 </div>
                 
-                <button type="submit" class="calculate-btn">Calculate BMI</button>
+                <button type="submit" class="calculate-btn">Hitung IMT</button>
             </form>
             
             <div id="result" class="result hidden">
-                <h2>BMI Result</h2>
+                <h2>Hasil IMT</h2>
                 <div class="bmi-value">
                     <span id="bmi-number">0.0</span>
                     <span class="unit">kg/m²</span>
@@ -46,15 +46,15 @@
                     <p id="conversion-note"></p>
                 </div>
                 <div class="bmi-category">
-                    <span id="category-text">Normal weight</span>
+                    <span id="category-text">Berat Badan Normal</span>
                 </div>
             </div>
             
             <div class="info-section">
-                <h3>How it works</h3>
+                <h3>Bagaimana cara kerja</h3>
                 <ul>
-                    <li><strong>Under 24 months:</strong> Use body length measurement</li>
-                    <li><strong>24 months and over:</strong> Use height measurement</li>
+                    <li><strong>Di bawah 24 bulan:</strong> Gunakan ukuran badan</li>
+                    <li><strong>24 bulan dan lebih:</strong> Gunakan ukuran tinggi badan</li>
                     <li><strong>Conversion:</strong> Length to height: +0.7cm | Height to length: -0.7cm</li>
                 </ul>
             </div>
